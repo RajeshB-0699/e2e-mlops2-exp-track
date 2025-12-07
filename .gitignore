@@ -1,4 +1,5 @@
 mlruns
 venv
 mlflow.db
+.env
 

@@ -6,6 +6,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
+env:
+    DAGSHUB_MLFLOW_URI : "https://dagshub.com/RajeshB-0699/e2e-mlops2-exp-track.mlflow"
+    MLFLOW_TRACKING_USERNAME : ${{ secrets.MLOPS_DAGSHUB_USERNAME }}
+    MLFLOW_TRACKING_PASSWORD: ${{ secrets.MLOPS_DAGSHUB_TOKEN }}
+
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -25,4 +30,8 @@ jobs:
             pip install --upgrade pip
             pip install --no-cache-dir -r requirements.txt
             echo " Done ..."
+
+        - name: Run training script
+          run: |
+            python train.py
             
