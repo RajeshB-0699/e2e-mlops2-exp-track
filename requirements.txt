@@ -1,0 +1,8 @@
+numpy
+mlflow
+scikit-learn
+flask
+pylint
+pytest
+black
+flake8
