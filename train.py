@@ -7,6 +7,17 @@ import mlflow
 import mlflow.sklearn
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 
+os.environ["MLFLOW_TRACKING_URI"]
+os.environ["MLFLOW_TRACKING_USERNAME"]
+os.environ["MLFOW_TRACKING_PASSWORD"]
+
+
+# https://dagshub.com/RajeshB-0699/e2e-mlops2-exp-track.mlflow
+
+# import dagshub
+# dagshub.init(repo_owner='RajeshB-0699', repo_name='e2e-mlops2-exp-track', mlflow=True)
+
+
 mlflow.set_experiment("IRIS MODEL TRAINING")
 iris = load_iris()
 X, y = iris.data, iris.target
