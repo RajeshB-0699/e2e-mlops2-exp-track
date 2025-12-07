@@ -1,8 +1,8 @@
 import pickle
 import os
+from sklearn.model_selection import train_test_split
 from sklearn.datasets import load_iris
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 import mlflow
 from sklearn.metrics import accuracy_score, precision_score, recall_score
 from dotenv import load_dotenv
