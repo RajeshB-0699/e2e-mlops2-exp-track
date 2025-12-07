@@ -30,3 +30,6 @@ jobs:
 
     - name: Run training
       run: python train.py
+    
+    - name: Final echo
+      run: echo " Done ..."
